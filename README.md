@@ -1,4 +1,4 @@
-# Batch_Check_PyPI_Markdown_Links
+# Batch_Check_PyPI_Relative_Paths
 
 Inspired by [PyPI_Relative_Path_Check](https://github.com/KPCOFGS/PyPI_Relative_Path_Check)
 
@@ -18,7 +18,7 @@ You can download the script using `git`
 
 ```bash
 git clone https://github.com/KPCOFGS/Batch_Check_PyPI_Markdown_Links.git
-cd Batch_Check_PyPI_Markdown_Links
+cd Batch_Check_PyPI_Relative_Paths
 ```
 
 You can install the dependencies using pip:
