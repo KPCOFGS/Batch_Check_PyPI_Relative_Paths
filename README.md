@@ -2,7 +2,7 @@
 
 Inspired by [PyPI_Relative_Path_Check](https://github.com/KPCOFGS/PyPI_Relative_Path_Check)
 
-This Python script checks the relative paths from projects on the PyPi search results pages for Python3 projects. It fetches a specified number of pages and checks all the relative paths in the project descriptions.
+This Python script checks the relative paths from projects on the PyPI search results pages for Python3 projects. It fetches a specified number of pages and checks all the relative paths in the project descriptions.
 
 ## How it works
 
