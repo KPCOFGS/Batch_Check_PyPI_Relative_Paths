@@ -31,12 +31,12 @@ def check_links(link_url):
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Get a specified number of pages from a URL.')
 parser.add_argument('--pages', type=int, required=True, help='The number of pages to scrape.')
+parser.add_argument('--starting-page', type=int, default=1, help='The starting page for scraping.')
 args = parser.parse_args()
-
-# Initialize the counter
-counter = 1
-
-while counter <= args.pages + 1:
+counter = args.starting_page
+if counter < 1:
+    raise ValueError("Starting page should be at least 1")
+while counter <= args.pages + args.starting_page - 1:
     url = "https://pypi.org/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3&o=-created&q=&page=" + str(counter)
     response = requests.get(url)
 
