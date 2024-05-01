@@ -35,6 +35,12 @@ You can run the script from the command line with the `--pages` argument to spec
 python script.py --pages PAGE_NUMBER
 ```
 
+Optional paramter `--starting-page` will determine which page you start, default to 1, cannot be below this value:
+
+```bash
+python script.py --pages PAGE_NUMBER --starting-page STARTING_PAGE_NUMBER
+```
+
 ## LICENSE
 
 This repository is licensed under the [Unlicense](LICENSE)
