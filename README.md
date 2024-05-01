@@ -17,7 +17,7 @@ The script uses the `requests` and `BeautifulSoup` libraries to fetch and parse 
 You can download the script using `git`
 
 ```bash
-git clone https://github.com/KPCOFGS/Batch_Check_PyPI_Markdown_Links.git
+git clone https://github.com/KPCOFGS/Batch_Check_PyPI_Relative_Paths.git
 cd Batch_Check_PyPI_Relative_Paths
 ```
 
@@ -32,15 +32,9 @@ pip install -r requirements.txt
 You can run the script from the command line with the `--pages` argument to specify the number of pages to check:
 
 ```bash
-python script.py --pages 10
+python script.py --pages PAGE_NUMBER
 ```
 
-This will check the links on the first 10 pages of the search results.
+## LICENSE
 
-## Dependencies
-
-The script requires the following Python libraries:
-
-- requests
-- BeautifulSoup
-```
+This repository is licensed under the [Unlicense](LICENSE)
