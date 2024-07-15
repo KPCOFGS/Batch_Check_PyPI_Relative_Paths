@@ -25,7 +25,7 @@ def check_links(link_url):
             try:
                 link_response = requests.head(absolute_url, allow_redirects=True)
             except ConnectionError as e:
-                print(f"{link_url} ---> Connection error for link: {absolute_url} ")
+                print(f"{link_url} ---> Connection error for link: {absolute_url}")
                 continue
             if link_response.status_code != 200:
                 print(f"{link_url} ---> Bad link: {absolute_url} -- Status Code: {link_response.status_code}")
