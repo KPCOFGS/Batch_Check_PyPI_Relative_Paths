@@ -2,11 +2,11 @@
 
 Inspired by [PyPI_Relative_Path_Check](https://github.com/KPCOFGS/PyPI_Relative_Path_Check)
 
-This Python script checks the relative paths from projects on the PyPI search results pages for Python3 projects. It fetches a specified number of pages and checks all the relative paths in the project descriptions.
+This Python script checks the relative and absolute paths from projects on the PyPI search results pages for Python3 projects. It fetches a specified number of pages and checks all paths in the project descriptions.
 
 ## How it works
 
-The script uses the `requests` and `BeautifulSoup` libraries to fetch and parse the HTML content of the pages. It then finds all the relative paths in the project descriptions and checks if they are valid. If a relative path is not valid, it prints a message with the URL of the bad link.
+The script uses the `requests` and `BeautifulSoup` libraries to fetch and parse the HTML content of the pages. It then finds all paths in the project descriptions and checks if they are valid. If a path is not valid, it prints a message with the URL of the bad link.
 
 ## Example
 
