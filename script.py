@@ -5,6 +5,7 @@ from urllib.parse import urlparse, urljoin
 from requests.exceptions import ConnectionError
 
 def check_links(link_url):
+    absolute_url = ""
     response = requests.get(link_url)
     if response.status_code != 200:
         print(f"Error: Failed to fetch {link_url}")
@@ -15,16 +16,19 @@ def check_links(link_url):
         links = project_description.find_all('a', href=True)
         for link in links:
             href = link['href']
-            if href.startswith('http') or href.startswith('mailto:'):
+            if href.startswith('mailto:'):
                 continue
-            absolute_url = urljoin(link_url, href)
+            elif href.startswith('http'):
+                absolute_url = href
+            else:
+                absolute_url = urljoin(link_url, href)
             try:
-                link_response = requests.head(absolute_url)
+                link_response = requests.head(absolute_url, allow_redirects=True)
             except ConnectionError as e:
-                print(f"Connection error for link: {absolute_url}. Ignoring and continuing.")
+                print(f"{link_url} ---> Connection error for link: {absolute_url} ")
                 continue
             if link_response.status_code != 200:
-                print(f"{link_url} ---> Bad link: {absolute_url}")
+                print(f"{link_url} ---> Bad link: {absolute_url} -- Status Code: {link_response.status_code}")
     else:
         print("No project description found on the page.")
 
