@@ -10,6 +10,7 @@ The script uses the `requests` and `BeautifulSoup` libraries to fetch and parse 
 
 ## Example
 
+![Demo](assets/demo_img.png)
 
 ## Download
 
